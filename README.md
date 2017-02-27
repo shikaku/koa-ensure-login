@@ -1,4 +1,4 @@
-# koa-ensure-login
+# koa2-ensure-login
 
 This is a port of [jaredhanson/connect-ensure-login](https://raw.githubusercontent.com/jaredhanson/connect-ensure-login) to Koa 2
 
@@ -9,7 +9,7 @@ page that was originally requested.
 
 ## Install
 
-    $ npm install koa-ensure-login2
+    $ npm install koa2-ensure-login
 
 ## Usage
 
