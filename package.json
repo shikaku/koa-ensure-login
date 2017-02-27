@@ -1,14 +1,14 @@
 {
-  "name": "koa-ensure-login",
+  "name": "koa-ensure-login2",
   "version": "0.1.0",
-  "description": "koa middlewares to ensure login",
+  "description": "koa2 middlewares to ensure login",
   "main": "./lib",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --harmony"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/RobinQu/koa-ensure-login.git"
+    "url": "git://github.com/shikaku/koa-ensure-login.git"
   },
   "keywords": [
     "koa",
@@ -16,12 +16,12 @@
     "login",
     "middleware"
   ],
-  "author": "RobinQu",
+  "author": "shikaku",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobinQu/koa-ensure-login/issues"
+    "url": "https://github.com/shikaku/koa-ensure-login/issues"
   },
-  "homepage": "https://github.com/RobinQu/koa-ensure-login",
+  "homepage": "https://github.com/shikaku/koa-ensure-login",
   "devDependencies": {
     "chai": "^1.9.1",
     "mocha": "^1.20.1"
