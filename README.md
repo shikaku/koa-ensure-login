@@ -1,6 +1,6 @@
 # koa-ensure-login
 
-This is a port of [jaredhanson/connect-ensure-login](https://raw.githubusercontent.com/jaredhanson/connect-ensure-login) to koa
+This is a port of [jaredhanson/connect-ensure-login](https://raw.githubusercontent.com/jaredhanson/connect-ensure-login) to Koa 2
 
 This middleware ensures that a user is logged in.  If a request is received that
 is unauthenticated, the request will be redirected to a login page.  The URL
@@ -9,7 +9,7 @@ page that was originally requested.
 
 ## Install
 
-    $ npm install koa-ensure-login
+    $ npm install koa-ensure-login2
 
 ## Usage
 
@@ -19,8 +19,8 @@ In this example, an application has a settings page where preferences can be
 configured.  A user must be logged in before accessing this page.
 
     app.use(ensureLoggedIn('/login'));
-    app.use(function() {
-      yield this.render('profile', { user: req.user });
+    app.use(function(ctx) {
+      ctx.render('profile', { user: req.user });
     });
       
 If a user is not logged in when attempting to access this page, the request will
@@ -35,8 +35,8 @@ To use with koa, you may find [rkusa/koa-passport](https://github.com/rkusa/koa-
 
 Simply mount Passport's `authenticate()` middleware at the login route.
 
-    router.get('/login', function() {
-      yield this.render('login');
+    router.get('/login', function(ctx) {
+      ctx.render('login');
     });
 
     router.post('/login', passport.authenticate('local', { successReturnToOrRedirect: '/', failureRedirect: '/login' }));
